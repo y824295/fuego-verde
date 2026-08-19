@@ -162,8 +162,7 @@
   .hero h1 em { font-style: normal; color: var(--ember); }
   .hero-lede { max-width: 620px; font-size: 19px; color: var(--ink-soft); margin: 0 0 30px; }
   .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px; }
-  .hero-stats { display: grid; grid-template-columns: repeat(3, auto); gap: clamp(24px,5vw,56px); border-top: 1px solid var(--line); padding-top: 22px; }
-  @media (max-width: 620px) { .hero-stats { grid-template-columns: 1fr 1fr; } }
+  .hero-stats { display: flex; justify-content: center; flex-wrap: wrap; gap: clamp(24px,5vw,56px); border-top: 1px solid var(--line); padding-top: 22px; }
   .hero-stat .n { font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: clamp(28px,4vw,40px); color: var(--ember); line-height: 1; }
   .hero-stat .l { font-size: 12.5px; color: var(--ink-soft); margin-top: 6px; max-width: 16ch; }
 
@@ -304,7 +303,6 @@
       <a class="btn btn-ghost" href="#producto">Ver pastillas iniciadoras</a>
     </div>
     <div class="hero-stats">
-      <div class="hero-stat"><div class="n">60&ndash;80</div><div class="l">siniestros forestales por temporada en la región</div></div>
       <div class="hero-stat"><div class="n">99,7%</div><div class="l">de los incendios se originan por acción humana</div></div>
       <div class="hero-stat"><div class="n">3.000 m²</div><div class="l">de terreno despejado en 60&ndash;90 minutos, cuadrilla de 5</div></div>
     </div>
