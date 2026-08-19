@@ -32,6 +32,8 @@
     --moss-tint: #C3CFAE;
     --line: #B9B196;
     --line-soft: #CFC9B2;
+    --closing-bg: #24361A;
+    --closing-ink: #EFEAD9;
     --shadow: 0 1px 0 rgba(32,27,19,0.06);
   }
 
@@ -51,6 +53,8 @@
       --moss-tint: #2A3320;
       --line: #362F21;
       --line-soft: #2A2419;
+      --closing-bg: #16210F;
+      --closing-ink: #ECE6D6;
       --shadow: 0 1px 0 rgba(0,0,0,0.4);
     }
   }
@@ -138,7 +142,7 @@
   }
   .btn-solid { background: var(--ember); border-color: var(--ember); color: #FBF3EC; }
   .btn-solid:hover { background: var(--ember-deep); border-color: var(--ember-deep); }
-  .btn-ghost:hover { background: var(--ink); color: var(--bg); }
+  .btn-ghost:hover { background: var(--moss); border-color: var(--moss); color: var(--bg); }
 
   /* ---------- Hero ---------- */
   .hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
@@ -169,7 +173,7 @@
   @media (max-width: 680px) { .doc-inner { grid-template-columns: 1fr; } }
   .doc-tab { font-family: ui-monospace, monospace; }
   .doc-tab .num { font-size: 13px; color: var(--ember); letter-spacing: 0.06em; }
-  .doc-tab .rail { width: 1px; background: var(--line); height: 100%; margin: 12px auto 0; }
+  .doc-tab .rail { width: 1px; background: color-mix(in srgb, var(--moss) 45%, var(--line)); height: 100%; margin: 12px auto 0; }
   @media (max-width: 680px) { .doc-tab { display: flex; align-items: center; gap: 10px; margin-bottom: -6px; } .doc-tab .rail { width: 34px; height: 1px; margin: 0; } }
 
   .doc-head { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 26px; }
@@ -251,17 +255,16 @@
   .comuna-row b { color: var(--ink); font-weight: 600; }
 
   /* ---------- Closing CTA ---------- */
-  .closing { background: var(--ink); color: var(--bg); }
-  :root[data-theme="dark"] .closing, @media (prefers-color-scheme: dark) { }
+  .closing { background: var(--closing-bg); color: var(--closing-ink); }
   .closing-inner { padding: clamp(56px,8vw,96px) 0; text-align: left; }
-  .closing h2 { font-size: clamp(34px,6vw,64px); margin: 0 0 18px; color: var(--bg); }
-  .closing p { max-width: 54ch; color: color-mix(in srgb, var(--bg) 72%, transparent); font-size: 17px; margin: 0 0 34px; }
+  .closing h2 { font-size: clamp(34px,6vw,64px); margin: 0 0 18px; color: var(--closing-ink); }
+  .closing p { max-width: 54ch; color: color-mix(in srgb, var(--closing-ink) 72%, transparent); font-size: 17px; margin: 0 0 34px; }
   .closing-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 46px; }
   .closing .btn-solid { background: var(--ember); border-color: var(--ember); }
-  .closing .btn-line { border: 1px solid color-mix(in srgb, var(--bg) 40%, transparent); color: var(--bg); }
-  .closing .btn-line:hover { background: var(--bg); color: var(--ink); }
-  .closing-meta { display: flex; flex-wrap: wrap; gap: 32px; border-top: 1px solid color-mix(in srgb, var(--bg) 22%, transparent); padding-top: 24px; font-family: ui-monospace, monospace; font-size: 12.5px; color: color-mix(in srgb, var(--bg) 65%, transparent); letter-spacing: 0.03em; }
-  .closing-meta b { display: block; color: var(--bg); font-family: 'Source Serif 4', serif; font-size: 15px; margin-bottom: 4px; letter-spacing: 0; }
+  .closing .btn-line { border: 1px solid color-mix(in srgb, var(--closing-ink) 40%, transparent); color: var(--closing-ink); }
+  .closing .btn-line:hover { background: var(--closing-ink); color: var(--closing-bg); }
+  .closing-meta { display: flex; flex-wrap: wrap; gap: 32px; border-top: 1px solid color-mix(in srgb, var(--closing-ink) 22%, transparent); padding-top: 24px; font-family: ui-monospace, monospace; font-size: 12.5px; color: color-mix(in srgb, var(--closing-ink) 65%, transparent); letter-spacing: 0.03em; }
+  .closing-meta b { display: block; color: var(--closing-ink); font-family: 'Source Serif 4', serif; font-size: 15px; margin-bottom: 4px; letter-spacing: 0; }
 
   footer { padding: 22px clamp(20px,5vw,56px); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-family: ui-monospace, monospace; font-size: 11.5px; color: var(--ink-faint); background: var(--bg); }
 </style>
@@ -529,7 +532,7 @@
 
 <section class="closing" id="contacto">
   <div class="wrap closing-inner">
-    <span class="eyebrow" style="color:color-mix(in srgb, var(--bg) 60%, transparent)">Hablemos de tu terreno</span>
+    <span class="eyebrow" style="color:color-mix(in srgb, var(--closing-ink) 60%, transparent)">Hablemos de tu terreno</span>
     <h2 class="display" style="margin-top:14px;">Coordinemos<br>la visita.</h2>
     <p>Cuéntanos el tamaño y ubicación de tu predio, o pregunta por las pastillas iniciadoras al por mayor.</p>
     <div class="closing-actions">
